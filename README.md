@@ -20,6 +20,39 @@ Xamarin.Forms.EventAggregator is a .NET Standard 2.0 library.Its only dependency
 
 Does not require additional configuration. Just install the package in the shared project and use.
 
+**Sample**
+
+Create a Sample Message
+
+```csharp
+    public class TextMessage
+    {
+        public string Text { get; set; }
+    }
+```
+
+Register Handler to listen to the event
+
+```csharp
+
+  private void TextHandler(
+    TextMessage message)
+        {
+            Text = message.Text;
+        }
+        
+   //Register Event Handler
+            EventAggregator.Instance.RegisterHandler<TextMessage>(
+       TextHandler);
+```
+
+Send Message 
+
+```csharp
+   //Register Event
+          
+EventAggregator.Instance.SendMessage(TextMessage);
+```
 
 
 The complete example can be downloaded here: https://github.com/TBertuzzi/Xamarin.Forms.EventAggregator/tree/master/XamarinFormsEventAggregatorSample
