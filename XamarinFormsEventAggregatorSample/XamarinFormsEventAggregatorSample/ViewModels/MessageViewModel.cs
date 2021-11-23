@@ -38,6 +38,7 @@ namespace XamarinFormsEventAggregatorSample.ViewModels
                 Text = Text
             };
 
+            //Send Message
             EventAggregator.Instance.SendMessage(TextMessage);
 
             await Xamarin.Forms.Application.Current.MainPage.Navigation.PopAsync();

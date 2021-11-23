@@ -27,7 +27,7 @@ namespace XamarinFormsEventAggregatorSample.ViewModels
         {
             _text = string.Empty;
 
-            //Registra o Evento
+            //Register EventHandler
             EventAggregator.Instance.RegisterHandler<TextMessage>(
        TextHandler);
 
