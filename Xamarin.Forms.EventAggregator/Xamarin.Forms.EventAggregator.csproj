@@ -2,10 +2,25 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Company>KBits</Company>
+    <Authors>tbertuzzi</Authors>
+    <Copyright>Copyright ©2021 KBits</Copyright>
+    <PackageProjectUrl>https://github.com/TBertuzzi/Xamarin.Forms.EventAggregator</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TBertuzzi/Xamarin.Forms.EventAggregator</RepositoryUrl>
+    <Description>EventAggregator for Xamarin.Forms</Description>
+    <PackageTags>xamarin xamarin.forms xamarin forms messagecenter eventaggregator event aggregator</PackageTags>
+    <PackageIcon>icone.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageReleaseNotes>The EventAggregator provides multicast publish/subscribe functionality. This means there can be multiple publishers that raise the same event and there can be multiple subscribers listening to the same event.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Xamarin.Forms" />
+    <None Include="..\Resources\icone.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2244" />
