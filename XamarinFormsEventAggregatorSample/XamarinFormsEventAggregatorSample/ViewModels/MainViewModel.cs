@@ -8,26 +8,24 @@ namespace XamarinFormsEventAggregatorSample.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private readonly IEventAggregator _EventAggregator;
         public MvvmHelpers.Commands.Command TextViewCommand { get; }
 
-        string _texto;
-        public string Texto
+        string _text;
+        public string Text
         {
             get
             {
-                return _texto;
+                return _text;
             }
             set
             {
-                SetProperty(ref _texto, value);
+                SetProperty(ref _text, value);
             }
         }
 
-        public MainViewModel(IEventAggregator eventAggregator)
+        public MainViewModel()
         {
-            _texto = "Soma 0";
-            _EventAggregator = eventAggregator;
+            _text = string.Empty;
 
             //Registra o Evento
             EventAggregator.Instance.RegisterHandler<TextMessage>(
@@ -41,14 +39,14 @@ namespace XamarinFormsEventAggregatorSample.ViewModels
         private void TextHandler(
     TextMessage message)
         {
-            Texto = message.Text;
+            Text = message.Text;
         }
 
 
         private async Task SendTextViewCommandExecute()
         {
             await Xamarin.Forms.Application.Current.
-            MainPage.Navigation.PushAsync(new SomarPage());
+            MainPage.Navigation.PushAsync(new MessagePage());
         }
     }
 }

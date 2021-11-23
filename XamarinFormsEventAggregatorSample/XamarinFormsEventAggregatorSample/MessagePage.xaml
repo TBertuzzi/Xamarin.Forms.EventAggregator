@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinFormsEventAggregatorSample.MessagePage">
+    <ContentPage.Content>
+        <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="EventAggregator" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Write a message" FontSize="Title" Padding="{StaticResource SamplePadding}"/>
+        <Entry Text="{Binding Text}" FontSize="16" Margin="30,0,30,0"/>
+        <Button Text="Back" Command="{Binding SendTextCommand}"></Button>
+      
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

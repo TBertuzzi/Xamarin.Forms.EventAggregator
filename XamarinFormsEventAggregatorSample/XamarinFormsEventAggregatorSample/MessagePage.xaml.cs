@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using XamarinFormsEventAggregatorSample.ViewModels;
 
 namespace XamarinFormsEventAggregatorSample
 {
-    public partial class MainPage : ContentPage
+    public partial class MessagePage : ContentPage
     {
-        public MainPage()
+        public MessagePage()
         {
             InitializeComponent();
 
-            this.BindingContext = new MainViewModel();
+            this.BindingContext = new MessageViewModel();
         }
     }
 }
