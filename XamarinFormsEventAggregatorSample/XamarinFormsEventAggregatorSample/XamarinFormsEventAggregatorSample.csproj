@@ -13,14 +13,18 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2244" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Xamarin.Forms.EventAggregator\Xamarin.Forms.EventAggregator.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Events\" />
+    <None Remove="Refractored.MvvmHelpers" />
+    <None Remove="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Events\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 </Project>
