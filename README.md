@@ -6,6 +6,8 @@ The EventAggregator provides multicast publish/subscribe functionality. This mea
 
 ![](https://github.com/TBertuzzi/Xamarin.Forms.EventAggregator/blob/master/Resources/eventAggregator.png?raw=true)
 
+![](https://github.com/TBertuzzi/Xamarin.Forms.EventAggregator/blob/master/Resources/aggregator.gif?raw=true)
+
 **NuGet**
 
 |Name|Info|
